@@ -69,7 +69,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include mixins.onTablet {
+  @include mixins.on-tablet {
     padding-block: 64px;
   }
 
@@ -83,7 +83,7 @@
 
     @include mixins.hover(transform, scale(1.2));
 
-    @include mixins.onTablet {
+    @include mixins.on-tablet {
       height: 24px;
     }
   }

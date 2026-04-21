@@ -11,7 +11,7 @@
   &__top {
     margin-bottom: 32px;
 
-    @include mixins.onTablet {
+    @include mixins.on-tablet {
       margin-bottom: 0;
     }
   }
@@ -67,7 +67,7 @@
     row-gap: 96px;
     padding-block: 96px;
 
-    @include mixins.onTablet {
+    @include mixins.on-tablet {
       padding-block: 120px;
       row-gap: 120px;
     }
@@ -96,7 +96,7 @@
     display: grid;
     row-gap: 40px;
 
-    @include mixins.onTablet {
+    @include mixins.on-tablet {
       row-gap: 64px;
     }
   }
@@ -104,7 +104,7 @@
 
 .category {
   &__photos {
-    @include mixins.pageGrid;
+    @include mixins.page-grid;
 
     margin-bottom: 16px;
   }
@@ -113,11 +113,11 @@
     position: relative;
 
     &--wide {
-      @include mixins.onTablet {
+      @include mixins.on-tablet {
         grid-column: span 4;
       }
 
-      @include mixins.onDesktop {
+      @include mixins.on-desktop {
         grid-column: span 8;
       }
     }
@@ -126,11 +126,11 @@
       height: 0;
       padding-bottom: 100%;
 
-      @include mixins.onTablet {
+      @include mixins.on-tablet {
         grid-column: span 2;
       }
 
-      @include mixins.onDesktop {
+      @include mixins.on-desktop {
         grid-column: span 4;
       }
     }
@@ -173,16 +173,16 @@
 }
 
 .about-us {
-  @include mixins.pageGrid;
+  @include mixins.page-grid;
 
   &__title {
     grid-column: 1 / -1;
 
-    @include mixins.onTablet {
+    @include mixins.on-tablet {
       grid-column: 1 / 4;
     }
 
-    @include mixins.onDesktop {
+    @include mixins.on--desktop {
       grid-column: span 5;
     }
   }
@@ -190,11 +190,11 @@
   &__content {
     grid-column: 1 / -1;
 
-    @include mixins.onTablet {
+    @include mixins.on-tablet {
       grid-column: 4 / 7;
     }
 
-    @include mixins.onDesktop {
+    @include mixins.on-desktop {
       grid-column: span 5;
     }
   }

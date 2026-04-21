@@ -2,7 +2,7 @@
 
 .recommended {
   &__products {
-    @include mixins.pageGrid;
+    @include mixins.page-grid;
 
     row-gap: 40px;
   }
@@ -10,11 +10,11 @@
   &__product {
     grid-column: 1 / -1;
 
-    @include mixins.onTablet {
+    @include mixins.on-tablet {
       grid-column: 2 / -2;
     }
 
-    @include mixins.onDesktop {
+    @include mixins.on-desktop {
       grid-column: span 4;
     }
   }
