@@ -1,0 +1,32 @@
+.product {
+  margin-bottom: 40px;
+
+  &__photo {
+    width: 100%;
+  }
+}
+
+.product_title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0;
+  padding: 24px 20px 8px;
+}
+
+.product_category {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 20px 12px;
+  margin: 0;
+}
+
+.product_price {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0;
+  padding: 0 20px 8px;
+}

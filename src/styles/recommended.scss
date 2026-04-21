@@ -1,0 +1,21 @@
+@use './mixins.scss';
+
+.recommended {
+  &__products {
+    @include mixins.pageGrid;
+
+    row-gap: 40px;
+  }
+
+  &__product {
+    grid-column: 1 / -1;
+
+    @include mixins.onTablet {
+      grid-column: 2 / -2;
+    }
+
+    @include mixins.onDesktop {
+      grid-column: span 4;
+    }
+  }
+}

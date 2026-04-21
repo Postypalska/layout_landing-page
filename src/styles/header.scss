@@ -1,0 +1,108 @@
+@use './mixins.scss';
+
+.page {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 140%;
+
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  margin: 0;
+}
+
+.page__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page__menu:target {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.header {
+  // display: none !important;
+
+  background-image: url(/src/images/Image.png);
+  background-size: cover;
+  background-position: center;
+
+  &__content {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    padding: 0 20px 40px;
+  }
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  margin: 0;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.top-bar {
+  padding: 24px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mixins.onTablet {
+    padding-block: 64px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__logo {
+    height: 16px;
+
+    @include mixins.hover(transform, scale(1.2));
+
+    @include mixins.onTablet {
+      height: 24px;
+    }
+  }
+}
+
+.icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon--phone {
+  background-image: url(/src/images/icons/Phone-number.png);
+}
+
+.icon--menu {
+  background-image: url(/src/images/icons/Icon-Burger-menu.png);
+}
+
+.icon--close {
+  background-image: url(/src/images/icons/Icon-Close.png);
+}
