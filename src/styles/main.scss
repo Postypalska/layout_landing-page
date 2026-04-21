@@ -182,7 +182,7 @@
       grid-column: 1 / 4;
     }
 
-    @include mixins.on--desktop {
+    @include mixins.on-desktop {
       grid-column: span 5;
     }
   }
