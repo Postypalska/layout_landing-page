@@ -5,7 +5,6 @@
   color: #292929;
   font-size: 16px;
   line-height: 140%;
-
   scroll-behavior: smooth;
 }
 
@@ -15,28 +14,31 @@
 
 .page__menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .page__menu:target {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
 }
 
 .header {
-  // display: none !important;
-
   background-image: url(/src/images/Image.png);
   background-size: cover;
   background-position: center;
 
   &__content {
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,27 +46,27 @@
 
   &__bottom {
     padding: 0 20px 40px;
+
+    @include mixins.on-tablet {
+      padding-bottom: 64px;
+    }
   }
-}
 
-.header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0;
 
-.header__title {
-  margin: 0;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 36px;
-  line-height: 100%;
-  letter-spacing: 0;
+    @include mixins.on-tablet {
+      font-size: 48px;
+    }
+  }
 }
 
 .top-bar {
   padding: 24px 20px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,34 +77,86 @@
 
   &__icons {
     display: flex;
+    align-items: center;
     gap: 24px;
   }
 
   &__logo {
     height: 16px;
+    display: flex;
+    align-items: center;
 
     @include mixins.hover(transform, scale(1.2));
 
     @include mixins.on-tablet {
       height: 24px;
     }
+
+    img {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+  }
+}
+
+.phone-hover {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+
+  &__number {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: #292929;
+    text-decoration: none;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+
+    @include mixins.on-desktop {
+      display: block;
+    }
+  }
+
+  &:hover &__number,
+  &:focus-within &__number {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
   }
 }
 
 .icon {
-  display: block;
+  display: inline-block;
   height: 24px;
   width: 24px;
-}
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 
-.icon--phone {
-  background-image: url(/src/images/icons/Phone-number.png);
-}
+  &:hover {
+    transform: scale(1.15);
+  }
 
-.icon--menu {
-  background-image: url(/src/images/icons/Icon-Burger-menu.png);
-}
+  &--phone {
+    background-image: url(/src/images/icons/Phone-number.png);
+  }
 
-.icon--close {
-  background-image: url(/src/images/icons/Icon-Close.png);
+  &--menu {
+    background-image: url(/src/images/icons/Icon-Burger-menu.png);
+  }
+
+  &--close {
+    background-image: url(/src/images/icons/Icon-Close.png);
+  }
 }
