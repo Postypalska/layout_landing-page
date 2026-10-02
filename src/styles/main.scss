@@ -48,6 +48,11 @@
     letter-spacing: 2px;
     color: #292929;
     text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #9393a3;
+    }
   }
 
   &__call-to-order {
@@ -385,5 +390,10 @@
     line-height: 140%;
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #9393a3;
+    }
   }
 }

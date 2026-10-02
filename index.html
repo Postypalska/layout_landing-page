@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nothing (R)</title>
+    <link rel="icon" type="image/png" href="./src/images/Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
@@ -89,31 +90,37 @@
             <h2 class="section-title" >Recommended</h2>
             <div class="recommended__products">
               <article class="product recommended__product">
-                <img
-                  src="./src/images/Image-phone.png"
-                  alt="Phone (1)"
-                  class="product__photo"
-                >
+                <a href="#" class="product__image-link">
+                  <img
+                    src="./src/images/Image-phone.png"
+                    alt="Phone (1)"
+                    class="product__photo"
+                  >
+                </a>
                 <h3 class="product__title">Phone (1)</h3>
                 <p class="product__category">Designed with instinct, to bring joy back to the everyday. Through the Glyph Interface, a perfected OS and exceptional dual camera. All startlingly fast.</p>
                 <p class="product__price">$ 499.00</p>
               </article>
               <article class="product recommended__product">
-                <img
-                  src="./src/images/Image-ice.png"
-                  alt="Ear (2)"
-                  class="product__photo"
-                >
+                <a href="#" class="product__image-link">
+                  <img
+                    src="./src/images/Image-ice.png"
+                    alt="Ear (2)"
+                    class="product__photo"
+                  >
+                </a>
                 <h3 class="product__title">Ear (2)</h3>
                 <p class="product__category">Perfecting the path from artist to ear. So that music sounds just as it was intended.</p>
                 <p class="product__price">$ 149.00</p>
               </article>
               <article class="product recommended__product">
-                <img
-                  src="./src/images/Image-phoneeir.png"
-                  alt="Ear (stick)"
-                  class="product__photo"
-                >
+                <a href="#" class="product__image-link">
+                  <img
+                    src="./src/images/Image-phoneeir.png"
+                    alt="Ear (stick)"
+                    class="product__photo"
+                  >
+                </a>
                 <h3 class="product__title">Ear (stick)</h3>
                 <p class="product__category">Tech you can’t feel. Leaving just space for sound to come to life. Powered by custom sound technology.</p>
                 <p class="product__price">$ 119.00</p>
@@ -204,7 +211,7 @@
       <div class="conteiner">
         <div class="main__content">
           <section class="about-us" id="login">
-            
+
             <h2 class="
               about-us__title
               section-title
@@ -240,16 +247,22 @@
               </div>
               <div class="footer__item">
                 <p class="footer__label">Address</p>
-                <p class="footer__value">
+                <a
+                  href="https://maps.google.com/?q=400+first+ave.+suite+700+Minneapolis+MN+55401"
+                  class="footer__value"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   400 first ave.<br>
                   suite 700<br>
                   Minneapolis, MN 55401
-                </p>
+                </a>
               </div>
             </footer>
           </section>
         </div>
       </div>
     </main>
+    <script type="module" src="./src/scripts/main.js"></script>
   </body>
 </html>
