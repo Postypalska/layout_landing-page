@@ -70,7 +70,7 @@
 }
 
 .top-bar {
-  padding: 24px 20px;
+  padding: 24px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,24 +82,31 @@
   &__icons {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
+
+    @include mixins.on-tablet {
+      gap: 24px;
+    }
   }
 
   &__logo {
     height: 16px;
     display: flex;
     align-items: center;
-
-    @include mixins.hover(transform, scale(1.2));
-
-    @include mixins.on-tablet {
-      height: 24px;
-    }
+    transition: transform 0.2s ease;
 
     img {
       height: 100%;
       width: auto;
       display: block;
+    }
+
+    &:hover {
+      transform: scale(1.08);
+    }
+
+    @include mixins.on-tablet {
+      height: 24px;
     }
   }
 }
@@ -107,10 +114,10 @@
 .phone-hover {
   display: flex;
   align-items: center;
-  gap: 12px;
   position: relative;
 
   &__number {
+    display: none;
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     font-weight: 700;
@@ -127,14 +134,17 @@
 
     @include mixins.on-desktop {
       display: block;
+      margin-right: 12px;
     }
   }
 
   &:hover &__number,
   &:focus-within &__number {
-    opacity: 1;
-    transform: translateX(0);
-    pointer-events: auto;
+    @include mixins.on-desktop {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
   }
 }
 
