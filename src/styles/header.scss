@@ -149,28 +149,23 @@
 }
 
 .icon {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 24px;
   width: 24px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   cursor: pointer;
   transition: transform 0.2s ease;
+  text-decoration: none;
 
   &:hover {
     transform: scale(1.15);
   }
 
-  &--phone {
-    background-image: url(/src/images/icons/Phone-number.png);
-  }
-
-  &--menu {
-    background-image: url(/src/images/icons/Icon-Burger-menu.png);
-  }
-
-  &--close {
-    background-image: url(/src/images/icons/Icon-Close.png);
+  &__svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    stroke: #292929;
   }
 }
