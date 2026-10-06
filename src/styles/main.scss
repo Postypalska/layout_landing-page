@@ -250,6 +250,12 @@
     width: 100%;
     height: auto;
     display: block;
+
+    @include mixins.on-desktop {
+      height: 460px;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
 
@@ -351,6 +357,14 @@
 
     &:focus {
       background-color: #f0f0f0;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: #292929;
+      -webkit-box-shadow: 0 0 0 1000px #f7f7f7 inset;
+      transition: background-color 5000s ease-in-out 0s;
     }
   }
 
